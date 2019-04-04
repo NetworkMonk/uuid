@@ -11,7 +11,7 @@ func randomRange(min, max int64) int64 {
 	return rand.Int63n(max-min+1) + min
 }
 
-// Seed create a new time based seed
+// Seed creates a new time based seed
 func Seed() {
 	rand.Seed(time.Now().UTC().UnixNano())
 }

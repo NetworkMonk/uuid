@@ -4,10 +4,16 @@ import (
 	"fmt"
 	"math/rand"
 	"regexp"
+	"time"
 )
 
 func randomRange(min, max int64) int64 {
 	return rand.Int63n(max-min+1) + min
+}
+
+// Seed create a new time based seed
+func Seed() {
+	rand.Seed(time.Now().UTC().UnixNano())
 }
 
 // Generate will generate a new v4 UUID as a string
